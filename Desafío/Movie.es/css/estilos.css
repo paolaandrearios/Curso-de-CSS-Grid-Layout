@@ -1,0 +1,1098 @@
+
+html {
+	/*height: 100vh;*/
+}
+
+body {
+	font-family: "lato", sans-serif;
+	margin: 0;
+}
+
+.movie-page {
+	background-color: white;
+	display: grid;
+	grid-template-columns: [inicio] 10% [inicio2] 1fr [inicio3] 1fr [inicio4] 1fr [final]; 
+	grid-template-rows: [inicio-r] 1fr [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [linea10] 1fr [final-r];
+	grid-template-areas: "hero hero hero hero"	
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies"
+                         "sidebar list-movies list-movies list-movies";
+
+}
+
+.icon-menu {
+	display: none;
+}
+
+
+.hero {
+	display: grid;
+	grid-area: hero;
+	grid-template-areas: "title form form logo-user";
+	background-color: white;
+}
+
+.logo-user {
+	grid-area: logo-user;
+}
+
+
+.sidebar {
+	display: grid;
+	grid-row: línea2 / final-r;
+	grid-area: sidebar;
+	background-color: #fd6766;	
+
+}
+
+
+.sidebar-menu {
+	display: grid;
+	list-style: none;
+		grid-template-areas: "."
+	                         "sidebar-item1"
+	                         "sidebar-item2"
+	                         "sidebar-item3"
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "sidebar-item4";
+	                         
+	
+}
+
+
+.sidebar-item1 {
+	/*display: grid;*/
+/*	grid-column: inicio/inicio2;
+	grid-row: linea3/linea4;*/
+	grid-area: sidebar-item1;
+}
+
+.sidebar-item1 a {
+	text-decoration: none;
+	justify-content: center;
+	margin-left: 5%;
+}
+
+.sidebar ul {
+	margin-left: -12%;
+}
+
+
+.sidebar-item2 {
+/*	grid-column: inicio/inicio2;
+	grid-row: linea4/linea5;*/
+	grid-area: sidebar-item2;
+	
+}
+
+.sidebar-item2 a {
+	text-decoration: none;
+	justify-content: center;
+	margin-left: 10%;
+}
+
+.sidebar-item3 {
+/*	grid-column: inicio/inicio2;
+	grid-row: linea5/linea6;*/
+	grid-area: sidebar-item3;
+}
+
+.sidebar-item3 a {
+	text-decoration: none;
+	margin-left: 10%;
+}
+
+.sidebar-item4 {
+	/*grid-column: inicio/inicio2;
+	grid-row: linea9/linea10;*/
+	grid-area: sidebar-item4;
+}
+
+.sidebar-item4 a {
+	text-decoration: none;
+	margin-left: 8%;
+}
+
+
+.sidebar p {
+	text-decoration: none;
+	color: white;
+}
+
+
+
+
+.icon-home:before {
+  content: "\e902";
+}
+
+.icon-home {
+	color: white;
+	font-size: 250%;
+}
+
+.icon-hot:before {
+  content: "\e900";
+}
+
+.icon-hot {
+	color: white;
+	font-size: 250%;
+	under
+}
+
+.icon-heart:before {
+  content: "\e9da";
+}
+
+.icon-heart {
+	color: white;
+	font-size: 250%;
+}
+
+.icon-settings:before {
+  content: "\e994";
+}
+
+.icon-settings {
+	color: white;
+	font-size: 250%;
+}
+
+
+.logo {
+	grid-area: title;
+}
+
+.logo img{
+	width: 50px;
+	padding: 20px 0 20px 50px;
+	
+}
+
+.title {
+	grid-area: title;
+	text-align: center;
+ -webkit-text-stroke: 1px #fd6766;
+  -webkit-text-fill-color: white;
+	letter-spacing: 1px;
+}
+
+.form {
+	display: grid;
+	grid-area: form;
+	margin: 4% 0 4% 0;
+}
+
+.form input {
+   border-radius: 5px;	
+   background-color: white;
+   outline-color: #51ACF9;
+   padding: 0.8em;
+   border: 1px solid #959595;
+   font-size: 15px;
+ 
+  
+}
+
+
+
+
+.user {
+	grid-area: logo-user;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.logo-user {
+	margin-right:  20px;
+	grid-area: logo-user;
+	display: flex;
+	justify-content: flex-end;
+	
+}
+
+.logo-user img {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	margin-top: 8%;
+	margin-right: 8%;	
+}
+
+
+
+
+.list-movies {
+	grid-column: inicio2 / final;
+	grid-area: list-movies;
+	
+}
+
+
+.list-movies {
+	padding-left: 4%;
+	padding-right: 4%;
+	display: grid;
+	max-width: 100%;
+	grid-gap: 2%;
+	background-color: #F3F3F3;
+	grid-template-columns: [inicio2] 1fr [inicio3] 1fr [inicio4] 1fr [final];
+	grid-template-areas: "section1 . ."
+	                     "pets1 pets1-1 pets1-2"
+	                     "section2 . ."
+	                     "pets2 pets2-1 pets2-2"
+	                     "section3 . ."
+	                     "pets3 pets3-1 pets3-2";	
+
+}
+
+.overlay-description {
+	background: rgba(253,103,102,.7);
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0%;
+	top: 45%;
+	align-items: center;
+	justify-content: left;
+	color: white;
+	padding-left: 2%;
+
+}
+
+.overlay-description h3{
+	margin-top: .5em;
+	margin-bottom: .2em;
+	font-size: 20px;
+	font-weight: 600;
+}
+
+.overlay-description p {
+	margin-top: .5em;
+	margin-bottom: .2em;
+	font-size: 15px;
+	font-weight: 300;
+}
+
+
+div#overlay:hover {
+	margin-top: -27%;
+	transition: margin-top 1s; 
+}
+
+
+.list-movies img {
+	width: 100%;
+	height: 100%;
+}
+
+.pets1 {
+	grid-area: pets1;
+	position: relative;
+}
+
+.pets1-1 {
+	grid-area: pets1-1;
+	position: relative;
+}
+
+.pets1-2 {
+	grid-area: pets1-2;
+	position: relative;
+}
+
+
+.pets2 {
+	grid-area: pets2;
+	position: relative;
+}
+
+.pets2-1 {
+	grid-area: pets2-1;
+	position: relative;
+}
+
+.pets2-2 {
+	grid-area: pets2-2;
+	position: relative;
+}
+
+.pets3 {
+	grid-area: pets3;
+	position: relative;
+}
+
+.pets3-1 {
+	grid-area: pets3-1;
+	position: relative;
+}
+
+.pets3-2 {
+	grid-area: pets3-2;
+	position: relative;
+}
+
+
+.section1 {
+	grid-column: inicio2 / final;
+	padding: 10% 0% 0px 0px;
+	font-size: 20px;
+	font-weight: 600;
+    grid-area: section1;
+
+}
+
+.section2 {
+	grid-column: inicio2 / final;
+	padding: 0px 0px 0px 0px;
+	font-size: 20px;
+	font-weight: 600;
+	grid-area: section2;
+}
+
+.section3 {
+	grid-column: inicio2 / final;
+	padding: 0px 0px 0px 0px;
+	font-size: 20px;
+	font-weight: 600;	
+	grid-area: section3;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 1024px){
+
+
+.movie-page {
+	background-color: white;
+	display: grid;
+	grid-template-columns: [inicio] 10% [inicio2] 1fr [inicio3] 1fr [inicio4]; 
+	grid-template-rows: [inicio-r] 5% /*repeat(19, 1fr);*/ [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [linea10] 1fr [linea11] 1fr [linea12] 1fr [linea13] 1fr [linea14] 1fr [linea15] 1fr [linea16] 1fr [linea17] 1fr [linea18] 1fr [linea19] 1fr [final-r];
+	grid-template-areas: "hero hero hero"	
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies"
+                         "sidebar list-movies list-movies";
+                        
+}
+
+.icon-menu {
+	display: none;
+}
+
+.hero {
+	grid-area: hero;
+	grid-template-areas: "title form form logo-user";
+	background-color: white;
+}
+
+.logo {
+	grid-area: title;
+}
+
+.logo img{
+	width: 55px;
+	padding: 3% 0 5% 18%;
+
+}
+
+
+.title {
+	grid-area: title;
+	margin-left: 20%;
+	
+}
+
+.logo-user {
+	grid-area: logo-user;
+}
+
+.form {
+	grid-area: form;
+}
+
+
+.user {
+	grid-area: logo-user;
+	margin-right: 20%;
+}
+
+.section1 {
+	grid-column: inicio / inicio3;
+	padding: 3% 0% .8% 0%;
+	font-size: 20px;
+	font-weight: 600;
+    grid-area: section1;
+
+}
+
+.section2 {
+	grid-column: inicio / inicio3;
+	padding: 0% 0px 0px 0%;
+	font-size: 20px;
+	font-weight: 600;
+	grid-area: section2;
+}
+
+.section3 {
+	grid-column: inicio / inicio3;
+	padding: 0% 0px 0px 0%;
+	font-size: 20px;
+	font-weight: 600;	
+	grid-area: section3;
+}
+
+.list-movies {
+	grid-column: inicio / inicio3;
+	grid-area: list-movies;
+}
+
+
+.list-movies {
+	display: grid;
+	padding-left: 4%;
+	padding-right: 4%;
+	grid-gap: 2%;
+	background-color: #F3F3F3;
+	grid-template-columns: [inicio] 1fr [inicio2] 1fr [inicio3];
+	grid-template-areas: "section1 section1"
+	                     "pets1 pets1-1"
+	                     "pets1-2 ."
+	                     "section2 section2"
+	                     "pets2 pets2-1 "
+	                     "pets2-2 ."
+	                     "section3 section3"
+	                     "pets3 pets3-1"
+	                     "pets3-2 .";	 
+}
+
+
+.sidebar {
+	display: grid;
+	grid-area: sidebar;
+	background-color: #fd6766;
+
+
+}
+
+
+.sidebar-menu {
+	list-style: none;
+				grid-template-areas:
+			                 "."
+	                         "sidebar-item1"
+	                         "sidebar-item2"
+	                         "sidebar-item3"
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "."
+	                         "sidebar-item4";
+	                         
+	
+}
+
+
+.sidebar-item1 {
+	grid-area: sidebar-item1;
+}
+
+.sidebar-item1 a {
+	text-decoration: none;
+	justify-content: center;
+	margin-left: 5%;
+}
+
+.sidebar ul {
+	margin-left: -8%;
+}
+
+
+.sidebar-item2 {
+	grid-area: sidebar-item2;
+	
+}
+
+.sidebar-item2 a {
+	text-decoration: none;
+	justify-content: center;
+	margin-left: 8%;
+}
+
+.sidebar-item3 {
+	grid-area: sidebar-item3;
+}
+
+.sidebar-item3 a {
+	text-decoration: none;
+	margin-left: 8%;
+}
+
+.sidebar-item4 {
+	grid-area: sidebar-item4;
+}
+
+.sidebar-item4 a {
+	text-decoration: none;
+	margin-left: 8%;
+}
+
+
+div#overlay:hover {
+	margin-top: -25%;
+	transition: margin-top 1s; 
+}
+
+
+}
+
+
+
+
+@media screen and (max-width:768px) {
+
+.logo img{
+	width: 40px;
+	padding: 3% 0 5% 18%;
+
+}
+	
+
+.title {
+	grid-area: title;
+	font-size: 28px;
+	margin-left: 23%;
+	margin-top: 5%;
+	
+}
+
+.user {
+	grid-area: logo-user;
+	margin-right: 25%;
+}
+
+.logo-user {
+	margin-top: -3%;
+}
+
+.icon-home {
+	color: white;
+	font-size: 200%;
+
+}
+
+.icon-hot {
+	color: white;
+	font-size: 200%;
+	
+}
+
+.icon-heart {
+	color: white;
+	font-size: 200%;
+}
+
+
+.icon-settings {
+	color: white;
+	font-size: 200%;
+}
+
+.sidebar ul {
+	margin-left: -30%;
+}
+
+.sidebar-item2 p {
+	text-decoration: none;
+	margin-left: -8%;
+}
+
+.sidebar-item3 p {
+	text-decoration: none;
+	margin-left: -10%;
+}
+
+
+}
+
+@media screen and (max-width: 480px){
+	
+    
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?q05lis');
+  src:  url('fonts/icomoon.eot?q05lis#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q05lis') format('truetype'),
+    url('fonts/icomoon.woff?q05lis') format('woff'),
+    url('fonts/icomoon.svg?q05lis#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+ }
+
+.icon-menu {
+	display: block;
+	position: absolute;
+	font-size: 200%;
+	left: 80%;
+	top: 10%;
+	
+	color: black;
+	grid-area: hero;
+}
+
+  
+
+	.movie-page {
+	background-color: white;
+	display: grid;
+	grid-template-columns: [inicio] 1fr [inicio2]; 
+	grid-template-rows: [inicio-r] 4% [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [linea10] 1fr [final-r];
+	grid-template-areas: "hero"	
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies";
+
+}
+
+.hero {
+	display: grid;
+	grid-area: hero;
+	grid-template-areas: "title";
+	background-color: white;
+}
+
+.logo {
+	grid-area: title;
+}
+
+.logo img{
+	width: 55px;
+	padding: 20px 0 0% 8%;
+
+}
+
+
+.title {
+	grid-area: title;
+	padding-right: 50%; 
+ -webkit-text-stroke: 1px #fd6766;
+  -webkit-text-fill-color: white;
+	letter-spacing: 1px;
+	font-size: 35px;
+	margin-bottom: 0%;
+	height: 10%;
+	
+}
+
+.logo-user {
+	display: none;
+}
+
+.form {
+	display: none;
+}
+
+.user {
+	display: none;
+}
+
+.section1 {
+	grid-column: inicio / inicio2;
+	padding: 10% 0% 0px 10%;
+	font-size: 20px;
+	font-weight: 600;
+    grid-area: section1;
+    height: 30%;
+   
+}
+
+.section2 {
+	grid-column: inicio / inicio2;
+	padding: 6% 0px 0px 10%;
+	font-size: 20px;
+	font-weight: 600;
+	grid-area: section2;
+	
+}
+
+.section3 {
+	grid-column: inicio / inicio2;
+	padding: 6% 0px 0px 10%;
+	font-size: 20px;
+	font-weight: 600;	
+	grid-area: section3;
+}
+
+.list-movies {
+	grid-column: inicio / inicio2;
+	grid-area: list-movies;
+	
+	
+}
+
+
+.list-movies {
+	display: grid;
+	max-width: 100%;
+	max-height: 100%;
+	grid-gap: 1%;
+	background-color: #F3F3F3;
+	grid-template-columns: [inicio] 1fr [inicio2];
+	grid-template-rows: [linea2] 3% [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [linea10] 1fr [linea11] 1fr [linea12] 1fr [final-r]; 
+	grid-template-areas: "section1"
+	                     "pets1"
+	                     "pets1-1"
+	                     "pets1-2"
+	                     "section2"
+	                     "pets2"
+	                     "pets2-1"
+	                     "pets2-2"
+	                     "section3"
+	                     "pets3"
+	                     "pets3-1" 
+	                     "pets3-2";	
+ 
+
+
+
+
+}
+
+.sidebar {
+	display: none;
+}
+
+.list-movies img {
+	width: 80%;
+	height: 80%;
+	margin: 0% 10% 0% 10%;
+	position: relative;
+}
+
+.overlay-description {
+	background: rgba(253,103,102,.7);
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	bottom: 2%;
+	top: 74%;
+	align-items: center;
+	justify-content: left;
+	color: white;
+	padding-left: 2%;
+	overflow: hidden;
+
+}
+
+
+.overlay-description h3{
+	margin-top: .6em;
+	font-size: 20px;
+	font-weight: 600;
+	padding-left: 5%;
+}
+
+.overlay-description p {
+	padding-top: 2.5%;
+}
+
+div#overlay:hover {
+	margin-top: -33%;
+	transition: margin-top 1s; 
+}
+
+
+
+ }
+
+@media screen and (max-width: 320px){
+	
+@font-face {
+  font-family: 'icomoon';
+  src:  url('fonts/icomoon.eot?q05lis');
+  src:  url('fonts/icomoon.eot?q05lis#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?q05lis') format('truetype'),
+    url('fonts/icomoon.woff?q05lis') format('woff'),
+    url('fonts/icomoon.svg?q05lis#icomoon') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+  content: "\e9bd";
+ }
+
+.icon-menu {
+	display: block;
+	position: absolute;
+	font-size: 200%;
+	right: 2%;
+	top: 10%;
+	justify-content: center;
+	
+	color: black;
+	grid-area: hero;
+}
+
+  
+
+	.movie-page {
+	background-color: white;
+	display: grid;
+	grid-template-columns: [inicio] 1fr [inicio2]; 
+	grid-template-rows: [inicio-r] 4% [linea2] 1fr [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [linea10] 1fr [final-r];
+	grid-template-areas: "hero"	
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies"
+                         "list-movies";
+
+}
+
+.hero {
+	display: grid;
+	grid-area: hero;
+	grid-template-areas: "title";
+	background-color: white;
+	
+}
+
+.logo {
+	grid-area: title;
+}
+
+.logo img{
+	width: 55px;
+	padding: 20px 0 0% 8%;
+
+}
+
+
+.title {
+	grid-area: title;
+	padding-right: 50%; 
+ -webkit-text-stroke: 1px #fd6766;
+  -webkit-text-fill-color: white;
+	letter-spacing: 1px;
+	font-size: 35px;
+	margin-bottom: 0%;
+	height: 10%;
+	
+}
+
+.logo-user {
+	display: none;
+}
+
+.form {
+	display: none;
+}
+
+.user {
+	display: none;
+}
+
+.section1 {
+	grid-column: inicio / inicio2;
+	padding: 10% 0% 0px 10%;
+	font-size: 20px;
+	font-weight: 600;
+    grid-area: section1;
+    height: 30%;
+   
+}
+
+.section2 {
+	grid-column: inicio / inicio2;
+	padding: 6% 0px 0px 10%;
+	font-size: 20px;
+	font-weight: 600;
+	grid-area: section2;
+	
+}
+
+.section3 {
+	grid-column: inicio / inicio2;
+	padding: 6% 0px 0px 10%;
+	font-size: 20px;
+	font-weight: 600;	
+	grid-area: section3;
+}
+
+.list-movies {
+	grid-column: inicio / inicio2;
+	grid-area: list-movies;
+	
+	
+}
+
+
+.list-movies {
+	display: grid;
+	max-width: 100%;
+	max-height: 100%;
+	grid-gap: 1%;
+	background-color: #F3F3F3;
+	grid-template-columns: [inicio] 1fr [inicio2];
+	grid-template-rows: [linea2] 3% [linea3] 1fr [linea4] 1fr [linea5] 1fr [linea6] 1fr [linea7] 1fr [linea8] 1fr [linea9] 1fr [linea10] 1fr [linea11] 1fr [linea12] 1fr [final-r]; 
+	grid-template-areas: "section1"
+	                     "pets1"
+	                     "pets1-1"
+	                     "pets1-2"
+	                     "section2"
+	                     "pets2"
+	                     "pets2-1"
+	                     "pets2-2"
+	                     "section3"
+	                     "pets3"
+	                     "pets3-1" 
+	                     "pets3-2";	
+ 
+
+
+
+
+}
+
+.sidebar {
+	display: none;
+}
+
+.list-movies img {
+	width: 80%;
+	height: 80%;
+	margin: 0% 10% 0% 10%;
+	position: relative;
+}
+
+.overlay-description {
+	background: rgba(253,103,102,.7);
+	position: absolute;
+	left: 10%;
+	right: 10%;
+	bottom: 2%;
+	top: 74%;
+	align-items: center;
+	justify-content: left;
+	color: white;
+	padding-left: 2%;
+	overflow: hidden;
+
+}
+
+
+.overlay-description h3{
+	margin-top: .6em;
+	font-size: 20px;
+	font-weight: 600;
+	padding-left: 5%;
+}
+
+.overlay-description p {
+	padding-top: 2.5%;
+}
+
+div#overlay:hover {
+	margin-top: -33%;
+	transition: margin-top 1s; 
+}
+
+
+
+
+}
+
